@@ -3,6 +3,8 @@ import Home from './components/Home';
 import ChatWindow from './components/ChatWindow';
 import ErrorBoundary from './components/ErrorBoundary';
 
+import './App.css';
+
 function App() {
     const [inChat, setInChat] = useState(false);
 
@@ -11,7 +13,7 @@ function App() {
     };
 
     return (
-        <ErrorBoundary>
+        <ErrorBoundary fallback={<div>Something went wrong</div>} className="App">
             {inChat ? <ChatWindow /> : <Home startChat={startChat} />}
         </ErrorBoundary>
     );

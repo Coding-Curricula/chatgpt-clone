@@ -3,7 +3,11 @@
 import React from 'react';
 
 const LoadingIndicator = () => {
-  return <p>Loading...</p>;
-}
+  return (
+    <div className="loading-indicator">
+      <div className="loading-indicator__spinner"></div>
+    </div>
+  );
+};
 
 export default LoadingIndicator;

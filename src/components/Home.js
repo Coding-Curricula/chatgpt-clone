@@ -4,7 +4,7 @@ import React from 'react';
 
 const Home = ({ startChat }) => {
     return (
-        <div>
+        <div className="home-container">
             <h1>Welcome to the ChatGPT App</h1>
             <p>Click the button below to start chatting with AI.</p>
             <button onClick={startChat}>Start Chatting</button>

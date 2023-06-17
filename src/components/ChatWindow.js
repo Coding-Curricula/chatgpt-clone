@@ -90,7 +90,7 @@ export default function ChatWindow() {
   }
 
   return (
-    <div>
+    <div className="chat-window">
       {/* Display all messages */}
       {messages.map((message, index) => (
         <Message
@@ -104,7 +104,7 @@ export default function ChatWindow() {
       {loading && <LoadingIndicator />}
 
       {/* Some kind of input + send button to add new user messages */}
-      <form onSubmit={handleSubmit}>
+      <form onSubmit={handleSubmit} className="chat-form">
         <input type="text" value={input} onChange={handleInput} />
         <button type="submit">Send</button>
       </form>
